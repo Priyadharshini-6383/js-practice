@@ -1,5 +1,5 @@
 
-// reversting a string
+// reverstring a string
 
 let word = "apple";
 
