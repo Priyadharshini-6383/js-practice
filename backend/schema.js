@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 
-const schema = new mongoose.schema({
+const schema = new mongoose.Schema({
     Name : {
         type : String,
         required : true
     },
     Age : {
         type : Number,
-        true : true
+        required : true
     },
     Role : {
         type : String,

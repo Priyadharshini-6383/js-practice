@@ -3,17 +3,17 @@ const schema = require("../schema.js");
 
 
 const postuser = async(req,res)=> {
-    const user = new details ({
+    const user = new User ({
     Name : req.params.Name,
     Age : req.params.Age,
     Role : req.params.Role,
     })
 try {
-const details = await save.postuser();
-res.send(201).json(details);
+const details = await user.save();
+res.status(201).json(user);
 }
 catch(error) {
-    res.send(404).json({message : "Error found"});
+    res.status(404).json({message : "Error found"});
 }
 };
 
@@ -23,7 +23,7 @@ const getuser = async (req,res) => {
         res.send(201).json(user);
 
 } catch (error) {
-    res.send(404).json({message : "Error Found"});
+    res.status(404).json({message : "Error Found"});
 }
 };
 
@@ -31,7 +31,7 @@ const getuser = async (req,res) => {
 const UserById = async (req,res) => {
    try {
 
-    const userid = await User.FindById(req.params.id);
+    const userid = await User.findById(req.params.id);
      if(userid == null) {
         res.send(404).json({message : "user not found"});
      }
@@ -40,7 +40,7 @@ const UserById = async (req,res) => {
      }
    }
    catch (error) {
-    res.send(404).json({message : "Error found"});
+    res.status(404).json({message : "Error found"});
    }
 };
 

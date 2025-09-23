@@ -9,13 +9,13 @@ router.get("/user/:name" , (req,res) => {
    })
 
    
-   router.post("/" , postuser);
+   router.post("/" , controller.postuser);
 
 
-   router.get("/" , getuser);
+   router.get("/" , controller.getuser);
 
 
-   router.get ("/:id" , UserById);
+   router.get ("/:id" , controller.UserById);
    
 
 module.exports = router;
