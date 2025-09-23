@@ -2,9 +2,12 @@ const express = require("express");
 const app = express();
 
 const router = require("./router.js");
+const database = require("./database.js");
 
 
 const PORT = 3000;
+
+database();
 
 app.get('/' , (req,res) => {
     res.json({message : "Hello World"});

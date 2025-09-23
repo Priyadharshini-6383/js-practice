@@ -12,3 +12,4 @@ const database = async () => {
 
     }
 }
+module.exports = database();
