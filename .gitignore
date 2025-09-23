@@ -1,1 +1,7 @@
+//IGNORING NODE MODULES
+
 node_modules
+
+
+//HIDING DB USERNAME AMD PASSWORD
+.env
