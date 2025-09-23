@@ -1,12 +1,12 @@
-const schema = require("../schema.js");
+const User = require("./schema.js");
 
 
 
 const postuser = async(req,res)=> {
     const user = new User ({
-    Name : req.params.Name,
-    Age : req.params.Age,
-    Role : req.params.Role,
+    Name : req.body.Name,
+    Age : req.body.Age,
+    Role : req.body.Role,
     })
 try {
 const details = await user.save();
@@ -44,4 +44,4 @@ const UserById = async (req,res) => {
    }
 };
 
-module.exports = {postuser , getuser , UserById} 
+module.exports = {postuser , getuser , UserById} ;

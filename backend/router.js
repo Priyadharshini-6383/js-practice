@@ -1,7 +1,7 @@
 const express = require("express"); 
 const router = express.Router();
 
-const controllers = require("./controller.js");
+const {postuser,getuser,UserById} = require("./controller.js");
 
 router.get("/user/:name" , (req,res) => {
    const name = req.params.name;
@@ -9,13 +9,13 @@ router.get("/user/:name" , (req,res) => {
    })
 
    
-   router.post("/" , controller.postuser);
+   router.post("/" , postuser);
 
 
-   router.get("/" , controller.getuser);
+   router.get("/" , getuser);
 
 
-   router.get ("/:id" , controller.UserById);
+   router.get ("/:id" , UserById);
    
 
 module.exports = router;

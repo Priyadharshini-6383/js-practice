@@ -15,4 +15,4 @@ const database = async () => {
 
     }
 }
-module.exports = database();
+module.exports = database;
