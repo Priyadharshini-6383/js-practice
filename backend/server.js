@@ -9,6 +9,10 @@ const PORT = 3000;
 
 database();
 
+app.use(express.json());
+
+app.use(express.urlencoded({extended : true}))
+
 app.get('/' , (req,res) => {
     res.json({message : "Hello World"});
 });
@@ -18,7 +22,7 @@ app.use((req,res,next) => {
     console.log(`date and time  :${timestamp} | method :${req.method}`);
     next();
 })
-app.use("/" , router);
+app.use("/user" , router);
 
 app.listen(PORT , () => {
     console.log(`The server running in the http://localhost:${PORT}`);
