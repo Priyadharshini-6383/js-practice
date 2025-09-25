@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const {postuser,getuser,UserById} = require("./controller.js");
+const Roles = require("../Authentication./Roles.js");
 
 router.get("/user/:name" , (req,res) => {
    const name = req.params.name;

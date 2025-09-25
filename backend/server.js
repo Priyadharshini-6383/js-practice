@@ -3,6 +3,7 @@ const app = express();
 
 const router = require("./router.js");
 const database = require("./database.js");
+const Auth = require("../Authentication/Auth.js");
 
 
 const PORT = 3000;
@@ -10,6 +11,7 @@ const PORT = 3000;
 database();
 
 app.use(express.json());
+app.use(Auth);
 
 app.use(express.urlencoded({extended : true}))
 

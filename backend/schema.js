@@ -12,7 +12,15 @@ const schema = new mongoose.Schema({
     Role : {
         type : String,
         required : true
-    }
+    },
+    Mail : {
+        type : String,
+        required : true
+},
+Password : {
+    type : String,
+    required : true
+}
 })
 
 const User = mongoose.model("User" , schema);

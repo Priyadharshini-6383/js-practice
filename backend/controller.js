@@ -9,6 +9,8 @@ try {
     Name : req.body.Name,
     Age : req.body.Age,
     Role : req.body.Role,
+    Mail : req.body.Mail,
+    Password : req.body.Password
     })
 const Newuser = await user.save();
 res.status(201).json(Newuser);
